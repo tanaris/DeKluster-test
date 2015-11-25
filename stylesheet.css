@@ -1,0 +1,183 @@
+/* universal settings */
+
+body,
+ul,
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+a,
+p,
+span,
+h1,
+h2,
+h3,
+li {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: inherit;
+    text-decoration: none;
+}
+
+p,
+h1 {
+    margin: 0;
+}
+
+
+/* navbar */
+
+.navigationWrapper {
+    padding: 0 15%;
+    border-bottom: solid 1px black;
+    background-color: #1e262c;
+}
+
+.navigationContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navigationWrapper li {
+    list-style-type: none;
+    text-align: center;
+    padding: 0.5%;
+    width: 10%;
+    min-width: 100px;
+    margin: 1% 0px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+}
+
+.container {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    padding: 5% 0;
+}
+
+.container-fluid {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5% 0;
+    display: block;
+}
+
+#navBrand {
+    font-style: italic;
+    color: darkgray;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.navigationContainer li:nth-child(2) {
+    margin-left: 5%;
+}
+
+.navigationContainer li:nth-child(5) {
+    margin-right: 20%;
+}
+
+.navigationContainer a:hover {
+    color: #19a197;
+    text-decoration: underline;
+}
+
+
+/* Home Opmaak */
+
+.intro {
+    background-color: #19a197;
+    color: #fff;
+}
+
+.introContainer h1,
+.media h1 {
+    font-size: 28px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.introContainer p {
+    font-size: 22px;
+}
+
+.introSectionContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.introSectionContainer section {
+    float: left;
+    width: 300px;
+    height: 300px;
+}
+
+.introSectionContainer section img{
+    widows: 300px;
+    height: 300px;
+}
+
+/* Contact opmaak */
+.contactTable
+{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.adresSection
+{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.adresBox
+{
+    width: 20%;
+}
+
+.adresBox h2
+{
+    margin-bottom: 0;
+    
+}
+
+#map
+{
+    width: 30vh;
+    height: 30vh;
+}
+
+/* tablet filter */
+@media all and (max-width:700px) {
+    .container {
+        width: 80%;
+        padding: 15% 0;
+    }
+    #navBrand {
+        margin: 0 auto;
+    }
+    .introSectionContainer section {
+        width: 45%;
+    }
+    .navigationContainer {
+        display: block;
+    }
+    .navigationWrapper li {
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+    .navigationContainer li:nth-child(2) {
+        margin: 0 auto;
+    }
+    .navigationContainer li:nth-child(5) {
+        margin: 0 auto;
+    }
+}
