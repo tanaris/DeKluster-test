@@ -6,17 +6,24 @@
     <title>Contact pagina De Kluster</title>
     <link rel="stylesheet" href="stylesheet.css">
     <script src="http://maps.googleapis.com/maps/api/js"></script>
-<script>
-function initialize() {
-  var mapProp = {
-    center:new google.maps.LatLng(51.508742,-0.120850),
-    zoom:5,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("map"),mapProp);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
+    <script>
+        var map; //<-- This is now available to both event listeners and the initialize() function
+        function initialize() {
+            var mapOptions = {
+                center: new google.maps.LatLng(40.5472, 12.282715),
+                zoom: 6,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById("map"),
+                mapOptions);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+        google.maps.event.addDomListener(window, "resize", function () {
+            var center = map.getCenter();
+            google.maps.event.trigger(map, "resize");
+            map.setCenter(center);
+        });
+    </script>
 </head>
 
 <body>
@@ -32,86 +39,75 @@ google.maps.event.addDomListener(window, 'load', initialize);
         </div>
     </nav>
 
-    <section>
-        <article>
-            <table class="contactTable">
 
-                <tr>
-                    <th>Maandag</th>
-                    <th>Dinsdag</th>
-                    <th>Woensdag</th>
-                    <th>Donderdag</th>
-                    <th>Vrijdag</th>
-                    <th>Zaterdag</th>
-                    <th>Zondag</th>
-                </tr>
+    <div class="adresContainer">
 
-                <tr>
-                    <td>08:00 - 16:00</td>
-                    <td>08:00 - 16:00</td>
-                    <td>08:00 - 16:00</td>
-                    <td>08:00 - 16:00</td>
-                    <td>08:00 - 16:00</td>
-                    <td>08:00 - 16:00</td>
-                    <td>08:00 - 16:00</td>
-                </tr>
-                
-            </table>
-        </article>
-    </section>
-
-    <section class="adresSection">
         <article class="adresBox">
-
-            <h2>Adres</h2>
-            <p>Kerkplein 1a</p>
-            <p>3212 Pellenberg</p>
-
-            <h2>Telefoon</h2>
-            <p>+32 0496 64 64 12</p>
-
-            <h2>E-mail</h2>
-            <p>E-mail@adres.com</p>
             
+            
+            <section>
+                <h2>Adres</h2>
+                <p>Kerkplein 1a</p>
+                
+                <p>3212 Pellenberg</p>
+            </section>
+
+            <section>
+                <h2>Telefoon tset</h2>
+                <p>Siebe Seynaeve (voorzitter) +32 0496 64 64 12</p>
+                <p>Arne Pepermans (ondervoorzitter)</p>
+                <p>Kristof Bogaert (verhuurverantwoordelijke) </p>
+            </section>
+
+            <section>
+                <h2>E-mail</h2>
+                <p>E-mail@adres.com</p>
+            </section>
+
+            <section>
+                <h2>Social Media</h2>
+            </section>
+
         </article>
 
-        
-            <section class="adresBox">
-                <div id="map"></div>
-            </section>
-        
 
-    </section>
-    
+
+        <div id="map"></div>
+
+
+
+
+    </div>
+
 
     <section>
 
         <form action="MAILTO:contact@dekluster.be" method="post" enctype="text/plain" id="formulier">
-           <h1>Neem contact met ons op!</h1>
+            <h1>Neem contact met ons op!</h1>
             <p>
                 <label>naam:</label>
             </p>
             <input type="text" name="name" value="">
-            
-            <br> 
+
             <br>
-            
+            <br>
+
             <p>
                 <label for="Email">e-mail:</label>
             </p>
             <input id="Email" type="text" name="mail" value="">
-            
-            <br> 
+
             <br>
-            
+            <br>
+
             <p>
                 <label for="beschrijving">beschrijving:</label>
             </p>
-            <input id="beschrijving"  type="text" name="beschrijving" value="" size="100">
-            
+            <input id="beschrijving" type="text" name="beschrijving" value="" size="100">
+
             <br>
             <br>
-            
+
             <input type="submit" value="Versturen">
         </form>
 

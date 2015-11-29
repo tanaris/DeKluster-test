@@ -124,35 +124,36 @@ h1 {
 }
 
 /* Contact opmaak */
-.contactTable
+.adresContainer
 {
-    margin: 0 auto;
-    width: 80%;
-}
-
-.adresSection
-{
-    width: 60%;
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
+    width: 100%;
+    background-color: #19a197;
+    color: white;
 }
 
 .adresBox
 {
-    width: 20%;
+    width: 60%;
+    display:flex;
+    justify-content: space-around;
+    margin: 0 auto;
 }
 
 .adresBox h2
 {
     margin-bottom: 0;
-    
+}
+
+.adresBox h2:first-child
+{
+    margin-top:0;    
 }
 
 #map
 {
-    width: 30vh;
-    height: 30vh;
+    width: 200px;
+    
+    height: 200px;
 }
 
 /* tablet filter */
