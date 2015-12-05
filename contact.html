@@ -4,18 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact pagina De Kluster</title>
+    <link rel="stylesheet" href="./glyphicon/css/bootstrap.css">
     <link rel="stylesheet" href="stylesheet.css">
+    
     <script src="http://maps.googleapis.com/maps/api/js"></script>
     <script>
         var map; //<-- This is now available to both event listeners and the initialize() function
+        
+        
+        
         function initialize() {
             var mapOptions = {
-                center: new google.maps.LatLng(40.5472, 12.282715),
-                zoom: 6,
+                center: new google.maps.LatLng(50.8704684, 4.79131),
+                zoom: 17,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
-            map = new google.maps.Map(document.getElementById("map"),
-                mapOptions);
+            map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(50.8704551, 4.793303),
+                title: "titel"});
+            marker.setMap(map);
+            
+            
         }
         google.maps.event.addDomListener(window, 'load', initialize);
         google.maps.event.addDomListener(window, "resize", function () {
@@ -41,11 +52,10 @@
 
 
     <div class="adresContainer">
-
+       <div id="map"></div>
         <article class="adresBox">
-            
-            
             <section>
+                <img src="afbeeldingen/adres-icon.png" alt="">
                 <h2>Adres</h2>
                 <p>Kerkplein 1a</p>
                 
@@ -53,34 +63,31 @@
             </section>
 
             <section>
-                <h2>Telefoon tset</h2>
+               <img src="afbeeldingen/contact_icon.png" alt="">
+                <h2>Telefoon</h2>
                 <p>Siebe Seynaeve (voorzitter) +32 0496 64 64 12</p>
                 <p>Arne Pepermans (ondervoorzitter)</p>
                 <p>Kristof Bogaert (verhuurverantwoordelijke) </p>
             </section>
 
             <section>
+               <img src="afbeeldingen/email-icon.png" alt="">
                 <h2>E-mail</h2>
                 <p>E-mail@adres.com</p>
             </section>
 
             <section>
-                <h2>Social Media</h2>
+               <a href="www.facebook.com"><img class="socialMediaImage" src="afbeeldingen/facebook-icon.png" alt=""></a>
+               <h2>Social media</h2>
+                <p>Momenteel kan je ons alleen maar berijken via <a href="www.facebook.com">Facebook</a>.</p>
             </section>
 
         </article>
-
-
-
-        <div id="map"></div>
-
-
-
-
+        
     </div>
 
 
-    <section>
+    <section class="contactForm">
 
         <form action="MAILTO:contact@dekluster.be" method="post" enctype="text/plain" id="formulier">
             <h1>Neem contact met ons op!</h1>
@@ -113,7 +120,7 @@
 
     </section>
 
-    <section>
+    <section class="contactImage">
         <img src="http://lorempixel.com/200/200" alt="Afbeelding plaats De Kluster">
         <img src="http://lorempixel.com/200/200" alt="Afbeelding plaats De Kluster">
         <img src="http://lorempixel.com/200/200" alt="Afbeelding plaats De Kluster">

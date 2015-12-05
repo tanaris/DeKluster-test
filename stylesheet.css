@@ -137,23 +137,57 @@ h1 {
     display:flex;
     justify-content: space-around;
     margin: 0 auto;
+    padding: 5% 0;
+}
+
+.adresBox section
+{
+    width: 20%;
 }
 
 .adresBox h2
 {
     margin-bottom: 0;
+    text-align: center;
 }
 
-.adresBox h2:first-child
+.adresBox a
 {
-    margin-top:0;    
+    color: black;
+    text-decoration-line: underline;
+}
+
+.adresBox img
+{
+    display: block;
+    margin:0 auto;
+    width: 50%;
 }
 
 #map
 {
-    width: 200px;
+    width: 100% !important;
     
-    height: 200px;
+    height: 400px;
+}
+
+.contactForm
+{
+    margin: 3% auto;
+    width: 60%;
+}
+
+.contactImage
+{
+    width: 60%;
+    margin: 3% auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.socialMediaImage
+{
+    width:100%;
 }
 
 /* tablet filter */
