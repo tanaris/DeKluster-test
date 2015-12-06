@@ -121,6 +121,7 @@ h1 {
 .introSectionContainer section img{
     widows: 300px;
     height: 300px;
+    
 }
 
 /* Contact opmaak */
@@ -133,11 +134,21 @@ h1 {
 
 .adresBox
 {
-    width: 60%;
+    width: 80%;
     display:flex;
     justify-content: space-around;
     margin: 0 auto;
     padding: 5% 0;
+}
+
+.adresBox h2
+{
+    font-weight: 1000;
+}
+
+.adresBox p
+{
+    font-size: 20px;
 }
 
 .adresBox section
@@ -154,21 +165,31 @@ h1 {
 .adresBox a
 {
     color: black;
-    text-decoration-line: underline;
+    text-decoration: underline;
 }
 
 .adresBox img
 {
     display: block;
     margin:0 auto;
-    width: 50%;
+    width: 40%;
+}
+
+.adresBox p:nth-child(3n+2) 
+{
+    margin-bottom: 20px;   
+}
+
+#telefoonEnd
+{
+    margin-bottom: 0;
 }
 
 #map
 {
-    width: 100% !important;
+    width: 100%;
     
-    height: 400px;
+    height: 40vh;
 }
 
 .contactForm
@@ -190,8 +211,28 @@ h1 {
     width:100%;
 }
 
+
+/* huisregels opmaak */
+.huisregels
+{
+    background-color:#E8E8E8 ;
+}
+
+.huisregelsContainer
+{
+    margin: 0 auto;
+    width: 85%;
+    margin-top: 2%;
+}
+
+.huisregelsContainer ul
+{
+    margin-left: 20px;
+}
+
 /* tablet filter */
 @media all and (max-width:700px) {
+    /* index */
     .container {
         width: 80%;
         padding: 15% 0;
@@ -215,4 +256,20 @@ h1 {
     .navigationContainer li:nth-child(5) {
         margin: 0 auto;
     }
+    
+    
+    /* contact */
+    .adresBox
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .adresBox section
+    {
+        width: 60%;
+        margin: 20px auto;
+    }
+    
+    
 }
