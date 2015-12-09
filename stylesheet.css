@@ -113,16 +113,14 @@ h1 {
 }
 
 .introSectionContainer section {
-    float: left;
     width: 300px;
     height: 300px;
 }
 
 .introSectionContainer section img{
-    widows: 300px;
+    width: 300px;
     height: 300px;
-    
-    
+    max-width: 100%;
 }
 
 .container iframe
@@ -234,6 +232,11 @@ h1 {
     width: 100%;
 }
 
+inputMededeling
+{
+   width: 100%;
+}
+
 .inputSubmit
 {
     width: 100px;
@@ -254,13 +257,73 @@ h1 {
     margin-top: 2%;
 }
 
+/* verhuur opmaak */
+.verhuurContainer
+{
+    width: 80%;
+    margin:3% auto;
+    font-size: 20px;
+}
+
+.verhuurContainer h1
+{
+    text-align: center;
+}
+
+.verhuurInfo div
+{
+    float:left;
+    width: 33%;
+    text-align: center;
+}
+
+.verhuurInbegrepen
+{
+    clear:both;
+}
+
+.verhuurContactPersoon div
+{
+    margin: 0 auto;
+    display: block;
+    width: auto;
+    text-align: center;
+}
+
+.lastItem
+{
+    margin-top: 20px;
+}
+.verhuurInbegrepen a, .verhuurContactPersoon div a
+{
+    text-decoration: underline;
+}
+
+.drankPrijzen
+{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.drankPrijzen th
+{
+    font-size: 24px;
+    
+}
+
+.drankPrijzen tr td:first-child
+{
+    text-align: left;
+}
+
 .huisregelsContainer ul
 {
     margin-left: 20px;
 }
 
 /* tablet filter */
-@media all and (max-width:700px) {
+@media all and (max-width:960px) {
     /* index */
     .container {
         width: 80%;
@@ -269,7 +332,7 @@ h1 {
     #navBrand {
         margin: 0 auto;
     }
-    .introSectionContainer section {
+    .introSectionContainer {
         width: 45%;
     }
     .navigationContainer {
@@ -286,6 +349,13 @@ h1 {
         margin: 0 auto;
     }
     
+    /* verhuur pagina */
+    .verhuurInfo div
+    {
+        float:none;
+        width: 100%;
+        text-align: center;
+    }
     
     /* contact */
     .adresBox
@@ -300,5 +370,16 @@ h1 {
         margin: 20px auto;
     }
     
+    .contactImage
+    {
+        width: 100%;
+        display: block;
+    }
+    
+    .contactImage img
+    {
+        display: block;
+        margin: 3% auto;
+    }
     
 }
