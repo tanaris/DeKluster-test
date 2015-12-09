@@ -175,6 +175,11 @@ h1 {
     width: 40%;
 }
 
+.adresBox p:nth-child(3n)
+{
+    font-weight: bolder;
+}
+
 .adresBox p:nth-child(3n+2) 
 {
     margin-bottom: 20px;   
@@ -185,6 +190,11 @@ h1 {
     margin-bottom: 0;
 }
 
+#emailEnd
+{
+    margin-bottom:0;
+}
+    
 #map
 {
     width: 100%;
@@ -209,6 +219,11 @@ h1 {
 .socialMediaImage
 {
     width:100%;
+}
+
+.input
+{
+    width: 100%;
 }
 
 
