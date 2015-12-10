@@ -110,17 +110,12 @@ h1 {
 .introSectionContainer {
     display: flex;
     justify-content: space-around;
+    margin-top: 20px;
 }
 
-.introSectionContainer section {
+.introSectionContainer img{
     width: 300px;
     height: 300px;
-}
-
-.introSectionContainer section img{
-    width: 300px;
-    height: 300px;
-    max-width: 100%;
 }
 
 .container iframe
@@ -333,8 +328,17 @@ inputMededeling
         margin: 0 auto;
     }
     .introSectionContainer {
-        width: 45%;
+        width: 100%;
+        display: block;
+        
     }
+    
+    .introSectionContainer img
+    {
+        display: block;
+        margin: 0 auto;
+    }
+    
     .navigationContainer {
         display: block;
     }
@@ -381,5 +385,7 @@ inputMededeling
         display: block;
         margin: 3% auto;
     }
+    
+    
     
 }
