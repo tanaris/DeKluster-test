@@ -222,12 +222,14 @@ h1 {
     width:100%;
 }
 
-.input
+.inputNaam{}
+
+.inputEmail
 {
-    width: 100%;
+    width:250px;
 }
 
-inputMededeling
+.inputMededeling
 {
    width: 100%;
 }
@@ -247,9 +249,14 @@ inputMededeling
 
 .huisregelsContainer
 {
-    margin: 0 auto;
+    margin: 2% auto;
     width: 85%;
-    margin-top: 2%;
+}
+
+
+.huisregelsContainer ul
+{
+    margin-left: 20px;
 }
 
 /* verhuur opmaak */
@@ -258,6 +265,11 @@ inputMededeling
     width: 80%;
     margin:3% auto;
     font-size: 20px;
+}
+
+.huisregelsContainer
+{
+    margin: 50px auto;
 }
 
 .verhuurContainer h1
@@ -270,11 +282,19 @@ inputMededeling
     float:left;
     width: 33%;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .verhuurInbegrepen
 {
+    margin-top:50px;
+    margin-bottom: 50px;
     clear:both;
+}
+
+.verhuurInbegrepen ul
+{
+    margin-left:25px;
 }
 
 .verhuurContactPersoon div
@@ -312,10 +332,7 @@ inputMededeling
     text-align: left;
 }
 
-.huisregelsContainer ul
-{
-    margin-left: 20px;
-}
+
 
 /* tablet filter */
 @media all and (max-width:960px) {
@@ -336,7 +353,8 @@ inputMededeling
     .introSectionContainer img
     {
         display: block;
-        margin: 0 auto;
+        margin: 50px auto;
+        margin-bottom: 0;
     }
     
     .navigationContainer {
